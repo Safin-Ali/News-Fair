@@ -25,10 +25,14 @@ body {
 
 :root {
     --purple01: #5D5FEF;
+    --purple02: #ABADC6;
+    --purple03: #EEEFFF;
     --white01: #ffffff;
     --white02: #f6f6f6;
     --lightblack: #858585;
     --darkblack: #515151;
+    --black02: #121221;
+    --paste-thin: #718797;
     --Pixel7: .4375rem;
 }
 
@@ -57,6 +61,13 @@ body {
     color: var(--darkblack);
 }
 
+.text-black02{
+    color: var(--black02);
+}
+.text-paste-thin{
+    color: var(--paste-thin);
+}
+
 .fw-medium {
     font-weight: 500;
 }
@@ -67,4 +78,38 @@ body {
 
 .px-7 {
     padding: 0px var(--Pixel7);
+}
+
+.navbar-button{
+    color: var(--lightblack);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.navbar-button:hover{
+    color: var(--purple01);
+}
+
+.categories-button{
+    color: var(--lightblack);
+    border: none;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+}
+.categories-button:hover{
+    color: var(--purple01);
+    background-color: #EEEFFF;
+    border-radius: 3px;
+}
+.categories-button-active{
+    color: var(--purple01);
+    background-color: #EEEFFF;
+    border-radius: 3px;
+}
+
+/* ============================
+        Select Option
+  ============================== */
+
+.select-filter{
+    color: var(--purple02);
 }
