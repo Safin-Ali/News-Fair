@@ -1,0 +1,66 @@
+/* ============================
+
+=============================== */
+
+
+/* ============================
+        External Font
+=============================== */
+
+@import url('http://fonts.cdnfonts.com/css/poppins');
+
+/* ============================
+        Feneral Style
+=============================== */
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--white02);
+}
+
+/* ============================
+        Color Variable
+=============================== */
+
+:root {
+    --purple01: #5D5FEF;
+    --white01: #ffffff;
+    --white02: #f6f6f6;
+    --lightblack: #858585;
+    --Pixel7: .4375rem;
+}
+
+
+/* ============================
+        Common Class
+=============================== */
+
+.common-color {
+    color: var(--purple01);
+}
+
+.common-bg {
+    color: var(--white01);
+    background: var(--purple01);
+}
+
+.common-border {
+    border: 1px solid var(--purple01);
+}
+
+.light-black-color {
+    color: var(--lightblack);
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+.py-7 {
+    padding: var(--Pixel7) 0px;
+}
+
+.px-7 {
+    padding: 0px var(--Pixel7);
+}
