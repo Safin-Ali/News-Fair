@@ -28,6 +28,7 @@ body {
     --white01: #ffffff;
     --white02: #f6f6f6;
     --lightblack: #858585;
+    --darkblack: #515151;
     --Pixel7: .4375rem;
 }
 
@@ -51,6 +52,9 @@ body {
 
 .light-black-color {
     color: var(--lightblack);
+}
+.dark-black{
+    color: var(--darkblack);
 }
 
 .fw-medium {
