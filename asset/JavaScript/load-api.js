@@ -20,7 +20,6 @@ const loadCusTypedata = async (categorieID) => {
         const res = await fetch(url);
         const data = await res.json();
         displayPostSec(data.data)
-        console.log(data.data)
     }
     catch(error){
         console.log(error);

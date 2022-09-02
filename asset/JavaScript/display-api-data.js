@@ -18,12 +18,12 @@ const displayPostSec = (getPostData) => {
     getPostData.forEach(post => {
         const postTitle = post.title;
         const postThumb = post.thumbnail_url;
+        const postThumbBig = post.image_url;
         const postAuthorName = post.author.name;
         const postAuthImg = post.author.img;
-        const postPublishDate = post.author.published_date;
+        const postPublishDate = post.author.published_date.slice(0,10);
         const postView = post.total_view;
-        console.log();
-        const postSection = crePostSec(postTitle,postThumb,postAuthorName,postAuthImg,postPublishDate,postView)
+        const postSection = crePostSec(postTitle,postThumb,postThumbBig,postAuthorName,postAuthImg,postPublishDate,postView)
         selPostContainer.appendChild(postSection)
 
     })

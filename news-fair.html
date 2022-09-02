@@ -14,33 +14,37 @@
 
     <header class="my-3 container">
         <!-- Navbar Area -->
-        <nav class="d-flex justify-content-between border-1 border-bottom px-4 py-3">
+        <nav class="d-flex flex-column flex-md-row text-center justify-content-md-between border-1 border-bottom px-4 py-3">
             <div>
                 <h6><Span class="common-bg p-1 px-2 rounded-2 me-3">News</Span><span class="common-color">Fair</span></h6>
             </div>
-            <div class="d-flex gap-4 align-items-center">
-                <a class="d-block navbar-button" href="#">News</a>
-                <a class="d-block navbar-button" href="#">Blog</a>
-                <a class="d-block navbar-button" href="#">About</a>
-                <img class="d-block" src="asset/Images/user-avatar.png" alt="User Avatar">
+            <div class="d-flex flex-column flex-md-row align-items-center">
+                <div class="my-2 my-md-0">
+                    <a class="navbar-button mx-1" href="#">News</a>
+                    <a class="navbar-button mx-1" href="#">Blog</a>
+                    <a class="navbar-button mx-1" href="#">About</a>
+                </div>
+                <div class="mx-md-3">
+                    <img class="d-block" src="asset/Images/user-avatar.png" alt="User Avatar">
+                </div>
             </div>
         </nav>
         <!-- Categories Section -->
         <section class="my-4">
-            <div class="d-flex px-4 justify-content-between light-black-color" id="categoriesContainer">
-                <button type="button" class="categories-button">Home</button>
+            <div class="d-flex flex-column flex-lg-row px-4 justify-content-between light-black-color" id="categoriesContainer">
+                <button type="button" class="categories-button text-start my-1 my-lg-0">Home</button>
             </div>
         </section>
         <!-- Founded List Number Of Categories Section  -->
         <section class="my-3 bg-white py-3 rounded-2">
             <div class="px-4">
-                <p class="mb-0 fw-medium"><span>4</span> items found for category Entertainment</p>
+                <p class="mb-0 fw-medium text-center text-sm-start"><span>4</span> items found <span class="d-none d-sm-inline-block">for category Entertainment</span></p>
             </div>
         </section>
         <!-- Posts Filter Section -->
         <section class="my-5">
-            <div class="d-flex justify-content-between">
-                <div>
+            <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-between align-items-center">
+                <div class="my-3 mx-auto mx-sm-0 my-sm-0">
                     <span class="fw-semibold me-2">Sort by view:</span>
                     <select class="px-3 py-1 rounded-1 select-filter border-0" disabled>
                         <option>Default</option>
@@ -48,7 +52,7 @@
                         <option>Name</option>
                     </select>
                 </div>
-                <div>
+                <div class="my-3 mx-auto mx-sm-0 my-sm-0">
                     <span class="px-3 rounded-2 py-7 mx-1 common-bg">Today's Pick</span>
                     <span class="px-3 rounded-2 py-7 mx-1 common-border common-color">Trending</span>
                 </div>
