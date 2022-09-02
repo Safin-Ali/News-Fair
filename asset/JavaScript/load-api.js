@@ -19,14 +19,13 @@ const loadCusTypedata = async (categorieID) => {
         const url = `https://openapi.programming-hero.com/api/news/category/${categorieID}`;
         const res = await fetch(url);
         const data = await res.json();
-        // console.log(data);
+        displayPostSec(data.data)
+        console.log(data.data)
     }
     catch(error){
         console.log(error);
     }
 }
-
-loadCusTypedata('01')
 
 // Load News By News URL ID 
 
@@ -35,7 +34,6 @@ const loadDataDetails = async (urlID) => {
         const url = `https://openapi.programming-hero.com/api/news/${urlID}`;
         const res = await fetch(url);
         const data = await res.json();
-        // console.log(data);
     }
     catch(error){
         console.log(error);
@@ -49,7 +47,6 @@ const loadPostAuthorData = async (urlID) => {
         const url = `https://openapi.programming-hero.com/api/news/${urlID}`;
         const res = await fetch(url);
         const data = await res.json();
-        // console.log(data);
     }
     catch(error){
         console.log(error);

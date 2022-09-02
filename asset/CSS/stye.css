@@ -29,6 +29,7 @@ body {
     --purple03: #EEEFFF;
     --white01: #ffffff;
     --white02: #f6f6f6;
+    --grey-deep: #DDDDDD;
     --lightblack: #858585;
     --darkblack: #515151;
     --black02: #121221;
@@ -112,4 +113,14 @@ body {
 
 .select-filter{
     color: var(--purple02);
+}
+
+/* ============================
+         Post Author Image
+============================== */
+
+.post-author-img{
+    max-width: 40px;
+    border: 2px solid var(--grey-deep);
+    border-radius: 50%;
 }
