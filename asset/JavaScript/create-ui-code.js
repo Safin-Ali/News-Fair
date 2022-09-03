@@ -3,24 +3,25 @@
 
 function creCategsBtn (categName,categID)  {
     const creBtn = document.createElement('button');
-    creBtn.classList.add('categories-button','text-start','my-1','my-lg-0');
+    creBtn.classList.add('categories-button','text-start','my-1','my-lg-0','navbar-btn');
     creBtn.setAttribute('onclick',`loadCusTypedata('${categID}');`)
-    // creBtn.setAttribute('onclick',`postCountSec('${categID}');`)
-    // creBtn.setAttribute('onclick',`postCountSec('${categName}');`)
     creBtn.innerText = categName;
     return creBtn
 }
 
+
+
 //  Create Post Count Section
 
-function postCountSec (getObjData) {
+function postCountSec (length) {
     const selPostCountContainer = document.getElementById('categName');
     selPostCountContainer.innerHTML = '';
+    const prePostCountNum = document.getElementById('postCountNum');
     const creDivtag = document.createElement('div');
     creDivtag.classList.add('px-4')
     creDivtag.innerHTML = `  
-    <p class="mb-0 fw-medium text-center text-sm-start"><span id="postCount">0</span> items found <span
-            class="d-none d-sm-inline-block">for category <span>${getObjData}</span></span></p>
+    <p class="mb-0 fw-medium text-center text-sm-start"><span id="postCountNum">${length}</span> items found <span
+            class="d-none d-sm-inline-block">for category</p>
     `
     return selPostCountContainer.appendChild(creDivtag)
 }

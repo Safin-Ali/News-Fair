@@ -1,8 +1,8 @@
 // 01 Display Categories Section
 
-const displayCategSec = (getCategName) => {
+const displayCategSec = (getCategData) => {
     const selCategContainer = document.getElementById('categoriesContainer');
-    getCategName.map(item => {
+    getCategData.map(item => {
         const itemName = item.category_name;
         const itemID = item.category_id;
         const categName = creCategsBtn(itemName, itemID)
@@ -13,8 +13,8 @@ const displayCategSec = (getCategName) => {
 // 02 Display Post Section
 
 const displayPostSec = (getPostData) => {
-    // const totalCountPost = getPostData.length;
-    // totalCountPost === 0 ? selPostCountNum.innerText = `No` : selPostCountNum.innerText = totalCountPost;
+    const totalCountPost = getPostData.length;
+    totalCountPost === 0 ? postCountSec('No') : postCountSec(totalCountPost);
     const selPostContainer = document.getElementById('postConatiner');
     selPostContainer.innerHTML = ``;
     getPostData.forEach(post => {
