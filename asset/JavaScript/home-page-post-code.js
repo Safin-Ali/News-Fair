@@ -1,7 +1,7 @@
-function homePage () {
+function homePage() {
     const selPostContainer = document.getElementById('postConatiner');
     selPostContainer.innerHTML = ``;
-    document.getElementById('categName').style.display='none';
+    document.getElementById('categName').style.display = 'none';
     let homePageUICode = `<div class="card mb-3 shadow-sm">
     <div class="row g-0 justify-content-center justify-content-lg-start align-items-center">
         <div class="col-lg-3 p-3">
@@ -439,5 +439,5 @@ function homePage () {
 </div>
 `
 
-selPostContainer.innerHTML=homePageUICode;
+    selPostContainer.innerHTML = homePageUICode;
 }

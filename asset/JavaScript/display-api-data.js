@@ -10,16 +10,38 @@ const displayCategSec = (getCategData) => {
     })
 }
 
-// 02 Display Post Section
+// Get Type Sort Value
+
+const selcetOption = () => {
+    const selOptionBtn = document.getElementById('selectValue');
+    const getSelOptionValue = selOptionBtn.value;
+    const setSelOptionValue = selOptionBtn.setAttribute('value', getSelOptionValue);
+    console.log(getSelOptionValue);
+    return setSelOptionValue
+}
+
+// 03 Display Post Section
 
 const displayPostSec = (getPostData) => {
-    const totalCountPost = getPostData.length;
+    const callOptionSortFunc = selcetOption();
+    if (callOptionSortFunc === 'default') {
+        appendCode(getPostData)
+    } else {
+        getPostData.sort((a, b) => b.total_view - a.total_view)
+        appendCode(getPostData)
+    }
+
+    loadSpinner(false)
+}
+
+// 04 Post Section Append Code Here
+
+const appendCode = (datas) => {
+    const totalCountPost = datas.length;
     totalCountPost === 0 ? postCountSec('No') : postCountSec(totalCountPost);
     const selPostContainer = document.getElementById('postConatiner');
     selPostContainer.innerHTML = ``;
-    getPostData.sort((a,b) => b.total_view - a.total_view)
-
-    getPostData.forEach(post => {
+    datas.forEach(post => {
         const postTitle = post.title === null ? post.title = `Post Title Not Found` : post.title;
         const postThumb = post.thumbnail_url;
         const postThumbBig = post.image_url;
@@ -32,8 +54,6 @@ const displayPostSec = (getPostData) => {
         const postPublishDate = post.author.published_date === null ? post.author.published_date = `Date Not Found` : post.author.published_date;
         const postView = post.total_view === null ? post.total_view = `No Views ` : post.total_view;
         const postSection = crePostSec(postID, postTitle, postThumb, postDetails, postThumbBig, postAuthorName, postAuthImg, postPublishDate, postView, postRatingNum, postRatingBadge)
-        selPostContainer.appendChild(postSection)
-        console.log(postView);
+        return selPostContainer.appendChild(postSection)
     })
-    loadSpinner(false)
 }

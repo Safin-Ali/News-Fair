@@ -6,7 +6,6 @@ const loadAllTypeData = async () => {
         const res = await fetch(url);
         const data = await res.json();
         displayCategSec(data.data.news_category);
-        // console.log(data.data);
     } catch (error) {
         console.log(error);
     }
@@ -21,7 +20,6 @@ const defaultLoadAPI =  async () => {
         const res = await fetch(url);
         const data = await res.json();
         displayPostSec(data.data)
-        // console.log(data);
 
     } catch (error) {
         console.log(error);

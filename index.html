@@ -37,7 +37,8 @@
         <section class="my-4">
             <div class="d-flex flex-column flex-lg-row px-4 justify-content-between light-black-color"
                 id="categoriesContainer">
-                <button type="button" class="categories-button text-start my-1 my-lg-0" onclick="homePage()">Home</button>
+                <button type="button" class="categories-button text-start my-1 my-lg-0"
+                    onclick="homePage()">Home</button>
             </div>
         </section>
         <!-- Founded List Number Of Categories Section  -->
@@ -49,10 +50,10 @@
                 class="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-between align-items-center">
                 <div class="my-3 mx-auto mx-sm-0 my-sm-0">
                     <span class="fw-semibold me-2">Sort by view:</span>
-                    <select class="px-3 py-1 rounded-1 select-filter border-0" disabled>
-                        <option>Default</option>
-                        <option>Date</option>
-                        <option>Name</option>
+                    <select class="px-3 py-1 rounded-1 text-black02 border-0" id="selectValue"
+                        onchange="selcetOption()">
+                        <option value="top">Top</option>
+                        <option value="default">Default</option>
                     </select>
                 </div>
                 <div class="my-3 mx-auto mx-sm-0 my-sm-0">

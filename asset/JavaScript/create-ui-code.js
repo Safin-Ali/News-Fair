@@ -1,10 +1,9 @@
-
 //  Create navbar categories button
 
-function creCategsBtn (categName,categID)  {
+function creCategsBtn(categName, categID) {
     const creBtn = document.createElement('button');
-    creBtn.classList.add('categories-button','text-start','my-1','my-lg-0','navbar-btn');
-    creBtn.setAttribute('onclick',`loadCusTypedata('${categID}');`)
+    creBtn.classList.add('categories-button', 'text-start', 'my-1', 'my-lg-0', 'navbar-btn');
+    creBtn.setAttribute('onclick', `loadCusTypedata('${categID}');`)
     creBtn.innerText = categName;
     return creBtn
 }
@@ -13,10 +12,10 @@ function creCategsBtn (categName,categID)  {
 
 //  Create Post Count Section
 
-function postCountSec (length) {
+function postCountSec(length) {
     const selPostCountContainer = document.getElementById('categName');
     selPostCountContainer.innerHTML = '';
-    selPostCountContainer.style.display ='block'
+    selPostCountContainer.style.display = 'block'
     const prePostCountNum = document.getElementById('postCountNum');
     const creDivtag = document.createElement('div');
     creDivtag.classList.add('px-4')
@@ -29,10 +28,10 @@ function postCountSec (length) {
 
 // Create Post Section button
 
-function crePostSec (postID,title,thumb,details,bigThum,name,img,date,views,rateNum,rateBadge) {
+function crePostSec(postID, title, thumb, details, bigThum, name, img, date, views, rateNum, rateBadge) {
     const creDiv = document.createElement('div');
-    creDiv.classList.add('card','mb-3','shadow-sm');
-    creDiv.innerHTML=`
+    creDiv.classList.add('card', 'mb-3', 'shadow-sm');
+    creDiv.innerHTML = `
     <div class="row g-0 justify-content-center justify-content-lg-start align-items-center">
     <div class="col-lg-3 p-3">
       <img src="${thumb}" class="img-fluid rounded-start d-none d-lg-block" alt="Post Thumbnai">
@@ -118,25 +117,24 @@ function crePostSec (postID,title,thumb,details,bigThum,name,img,date,views,rate
 
 // Loading Spinner
 
-function loadSpinner (run) {
+function loadSpinner(run) {
     const selLoadingElem = document.getElementById('loadingAnim');
-    if(run){
-        return selLoadingElem.classList.replace('d-none','d-block')
-    }
-    else{
+    if (run) {
+        return selLoadingElem.classList.replace('d-none', 'd-block')
+    } else {
         return selLoadingElem.classList.add('d-none')
     }
 }
 
 // Create Blog Page
 
-function createBlogPage () {
+function createBlogPage() {
     const selPostContainer = document.getElementById('postConatiner');
     selPostContainer.innerHTML = ``;
-    document.getElementById('categName').style.display='none';
+    document.getElementById('categName').style.display = 'none';
     const creDivTag = document.createElement('div');
     creDivTag.classList.add('table-responsive')
-    creDivTag.innerHTML =`
+    creDivTag.innerHTML = `
     <h1 class="text-center mb-5">JavaScript ES6 Core Concept Summary</h1>
     <div class="my-3">
         <h5 class="text-center">01) What are the difference between let const,var each other?<span
