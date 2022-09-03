@@ -17,6 +17,8 @@ const displayPostSec = (getPostData) => {
     totalCountPost === 0 ? postCountSec('No') : postCountSec(totalCountPost);
     const selPostContainer = document.getElementById('postConatiner');
     selPostContainer.innerHTML = ``;
+    getPostData.sort((a,b) => b.total_view - a.total_view)
+
     getPostData.forEach(post => {
         const postTitle = post.title === null ? post.title = `Post Title Not Found` : post.title;
         const postThumb = post.thumbnail_url;
@@ -31,6 +33,7 @@ const displayPostSec = (getPostData) => {
         const postView = post.total_view === null ? post.total_view = `No Views ` : post.total_view;
         const postSection = crePostSec(postID, postTitle, postThumb, postDetails, postThumbBig, postAuthorName, postAuthImg, postPublishDate, postView, postRatingNum, postRatingBadge)
         selPostContainer.appendChild(postSection)
+        console.log(postView);
     })
     loadSpinner(false)
 }
