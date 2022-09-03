@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="asset/CSS/spinner.css">
 </head>
 
-<body onload="loadAllTypeData(); defaultLoadAPI()">
+<body onload="loadAllTypeData(); homePage()">
 
     <header class="my-3 container">
         <!-- Navbar Area -->
@@ -25,7 +25,7 @@
             </div>
             <div class="d-flex flex-column flex-md-row align-items-center">
                 <div class="my-2 my-md-0">
-                    <a class="navbar-button mx-1" href="#">News</a>
+                    <button class="navbar-button mx-1 border-0 bg-transparent" onclick="defaultLoadAPI()">News</button>
                     <button class="navbar-button mx-1 border-0 bg-transparent" onclick="createBlogPage()">Blog</button>
                 </div>
                 <div class="mx-md-3">
@@ -37,7 +37,7 @@
         <section class="my-4">
             <div class="d-flex flex-column flex-lg-row px-4 justify-content-between light-black-color"
                 id="categoriesContainer">
-                <button type="button" class="categories-button text-start my-1 my-lg-0">Home</button>
+                <button type="button" class="categories-button text-start my-1 my-lg-0" onclick="homePage()">Home</button>
             </div>
         </section>
         <!-- Founded List Number Of Categories Section  -->
@@ -66,7 +66,6 @@
     <main class="container my-3">
         <!-- Posts Section -->
         <section id="postConatiner">
-
         </section>
         <span class="loader mx-auto d-none dark-black" id="loadingAnim"></span>
     </main>
@@ -79,6 +78,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/JavaScript/home-page-post-code.js"></script>
     <script src="asset/JavaScript/load-api.js"></script>
     <script src="asset/JavaScript/create-ui-code.js"></script>
     <script src="asset/JavaScript/display-api-data.js"></script>

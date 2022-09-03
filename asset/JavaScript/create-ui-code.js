@@ -16,6 +16,7 @@ function creCategsBtn (categName,categID)  {
 function postCountSec (length) {
     const selPostCountContainer = document.getElementById('categName');
     selPostCountContainer.innerHTML = '';
+    selPostCountContainer.style.display ='block'
     const prePostCountNum = document.getElementById('postCountNum');
     const creDivtag = document.createElement('div');
     creDivtag.classList.add('px-4')
@@ -132,6 +133,7 @@ function loadSpinner (run) {
 function createBlogPage () {
     const selPostContainer = document.getElementById('postConatiner');
     selPostContainer.innerHTML = ``;
+    document.getElementById('categName').style.display='none';
     const creDivTag = document.createElement('div');
     creDivTag.classList.add('table-responsive')
     creDivTag.innerHTML =`
