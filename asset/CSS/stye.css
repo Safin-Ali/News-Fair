@@ -58,14 +58,16 @@ body {
 .light-black-color {
     color: var(--lightblack);
 }
-.dark-black{
+
+.dark-black {
     color: var(--darkblack);
 }
 
-.text-black02{
+.text-black02 {
     color: var(--black02);
 }
-.text-paste-thin{
+
+.text-paste-thin {
     color: var(--paste-thin);
 }
 
@@ -81,27 +83,30 @@ body {
     padding: 0px var(--Pixel7);
 }
 
-.navbar-button{
+.navbar-button {
     color: var(--lightblack);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
 }
-.navbar-button:hover{
+
+.navbar-button:hover {
     color: var(--purple01);
 }
 
-.categories-button{
+.categories-button {
     color: var(--lightblack);
     border: none;
     background: transparent;
     transition: all 0.3s ease-in-out;
 }
-.categories-button:hover{
+
+.categories-button:hover {
     color: var(--purple01);
     background-color: #EEEFFF;
     border-radius: 3px;
 }
-.categories-button-active{
+
+.categories-button-active {
     color: var(--purple01);
     background-color: #EEEFFF;
     border-radius: 3px;
@@ -111,7 +116,7 @@ body {
         Select Option
   ============================== */
 
-.select-filter{
+.select-filter {
     color: var(--purple02);
 }
 
@@ -119,8 +124,24 @@ body {
          Post Author Image
 ============================== */
 
-.post-author-img{
+.post-author-img {
     max-width: 40px;
     border: 2px solid var(--grey-deep);
     border-radius: 50%;
+}
+
+/* ============================
+        Modal button
+=============================== */
+
+.modal-button {
+    color: var(--purple01);
+    border: none;
+    background: transparent;
+}
+
+.modal-button:hover {
+    outline: none;
+    transform: scale(1.2);
+    transition: all .4s linear;
 }

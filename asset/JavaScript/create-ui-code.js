@@ -11,7 +11,7 @@ function creCategsBtn (categName,categID)  {
 
 // Create Post Section button
 
-function crePostSec (title,thumb,bigThum,name,img,date,views) {
+function crePostSec (postID,title,thumb,details,bigThum,name,img,date,views,rateNum,rateBadge) {
     const creDiv = document.createElement('div');
     creDiv.classList.add('card','mb-3','shadow-sm');
     creDiv.innerHTML=`
@@ -34,7 +34,7 @@ function crePostSec (title,thumb,bigThum,name,img,date,views) {
                   </div>
                   <div>
                       <h4 class="fs-6 text-black02">${name}</h4>
-                      <h4 class="fs-6 text-paste-thin d-block d-lg-none d-xl-block">${date}</h4>
+                      <h4 class="fs-6 text-paste-thin d-block d-lg-none d-xl-block">${date.substring(0,10)}</h4>
                   </div>
               </div>
           </div>
@@ -58,7 +58,36 @@ function crePostSec (title,thumb,bigThum,name,img,date,views) {
         <!-- Next Arrow Button -->
           <div class="col-6 col-lg-3">
               <div>
-                  <button><i class="fa-lg fa-solid fa-arrow-right"></i></button>
+                  <button class="modal-button" data-bs-toggle="modal" data-bs-target="#exampleModal${postID}"><i class="fa-2x fa-solid fa-arrow-right"></i></button>
+                  <div class="modal fade" id="exampleModal${postID}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-scrollable">
+                      <div class="modal-content">
+                          <div class="modal-header border-0">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="card mx-auto">
+                                  <img src="${img}" class="mx-auto card-img-top w-50" alt="Post Author Avatar">
+                                  <div class="card-body">
+                                      <div>
+                                          <p class="fw-medium text-black">Author Name: ${name}</p>
+                                          <p class="fw-medium text-black">Post Publish Date: <span class="common-color">${date.substring(0,10)}</span></p>
+                                          <p class="fw-medium text-black">Post Publish Time: <span class="common-color">${date.substring(10)}</span></p>
+                                      </div>
+                                      <div>
+                                          <p>${details}</p>
+                                      </div>
+                                      <div>
+                                          <p class="fw-medium text-black">Rating Number : <span class="common-color">${rateNum}</span></p>
+                                          <p class="fw-medium text-black">Badge : <span class="common-color">${rateBadge}</span></p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
               </div>
           </div>
       </div>

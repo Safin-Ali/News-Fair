@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Fair</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="asset/Images/news-favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
     <link rel="stylesheet" href="asset/CSS/stye.css">
 </head>
+
 <body onload="loadAllTypeData()">
 
     <header class="my-3 container">
         <!-- Navbar Area -->
-        <nav class="d-flex flex-column flex-md-row text-center justify-content-md-between border-1 border-bottom px-4 py-3">
+        <nav
+            class="d-flex flex-column flex-md-row text-center justify-content-md-between border-1 border-bottom px-4 py-3">
             <div>
-                <h6><Span class="common-bg p-1 px-2 rounded-2 me-3">News</Span><span class="common-color">Fair</span></h6>
+                <h6><Span class="common-bg p-1 px-2 rounded-2 me-3">News</Span><span class="common-color">Fair</span>
+                </h6>
             </div>
             <div class="d-flex flex-column flex-md-row align-items-center">
                 <div class="my-2 my-md-0">
@@ -31,19 +35,22 @@
         </nav>
         <!-- Categories Section -->
         <section class="my-4">
-            <div class="d-flex flex-column flex-lg-row px-4 justify-content-between light-black-color" id="categoriesContainer">
+            <div class="d-flex flex-column flex-lg-row px-4 justify-content-between light-black-color"
+                id="categoriesContainer">
                 <button type="button" class="categories-button text-start my-1 my-lg-0">Home</button>
             </div>
         </section>
         <!-- Founded List Number Of Categories Section  -->
         <section class="my-3 bg-white py-3 rounded-2">
             <div class="px-4">
-                <p class="mb-0 fw-medium text-center text-sm-start"><span>4</span> items found <span class="d-none d-sm-inline-block">for category Entertainment</span></p>
+                <p class="mb-0 fw-medium text-center text-sm-start"><span>4</span> items found <span
+                        class="d-none d-sm-inline-block">for category Entertainment</span></p>
             </div>
         </section>
         <!-- Posts Filter Section -->
         <section class="my-5">
-            <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-between align-items-center">
+            <div
+                class="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-between align-items-center">
                 <div class="my-3 mx-auto mx-sm-0 my-sm-0">
                     <span class="fw-semibold me-2">Sort by view:</span>
                     <select class="px-3 py-1 rounded-1 select-filter border-0" disabled>
@@ -63,6 +70,40 @@
     <main class="container my-3">
         <!-- Posts Section -->
         <section id="postConatiner">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card mx-auto" style="width: 18rem;">
+                                <img src="" class="card-img-top w-50" alt="Post Author Avatar">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-evenly">
+                                        <p>Author Name</p>
+                                        <p>Post Publish Date</p>
+                                    </div>
+                                    <div>
+                                        <p>Details</p>
+                                    </div>
+                                    <div class="d-flex justify-content-evenly">
+                                        <p>Rating Number :</p>
+                                        <p>Badge</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -72,10 +113,11 @@
             <p class="mb-0 text-center light-black-color">Copyright 2021 News fair</p>
         </section>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="asset/JavaScript/load-api.js"></script>
     <script src="asset/JavaScript/create-ui-code.js"></script>
     <script src="asset/JavaScript/display-api-data.js"></script>
 </body>
+
 </html>
