@@ -30,8 +30,6 @@ const displayPostSec = (getPostData) => {
         getPostData.sort((a, b) => b.total_view - a.total_view)
         appendCode(getPostData)
     }
-
-    loadSpinner(false)
 }
 
 // 04 Post Section Append Code Here
@@ -56,4 +54,5 @@ const appendCode = (datas) => {
         const postSection = crePostSec(postID, postTitle, postThumb, postDetails, postThumbBig, postAuthorName, postAuthImg, postPublishDate, postView, postRatingNum, postRatingBadge)
         return selPostContainer.appendChild(postSection)
     })
+    loadSpinner(false)
 }
