@@ -1,13 +1,12 @@
 // Load All Categories API Data
 
-const loadAllTypeData = async() => {
-    try{
+const loadAllTypeData = async () => {
+    try {
         const url = 'https://openapi.programming-hero.com/api/news/categories';
         const res = await fetch(url);
         const data = await res.json();
         displayCategSec(data.data.news_category)
-    }
-    catch(error){
+    } catch (error) {
         console.log(error);
     }
 }
@@ -15,13 +14,13 @@ const loadAllTypeData = async() => {
 // Load News By Searching categories Name 
 
 const loadCusTypedata = async (categorieID) => {
-    try{
+    try {
+        loadSpinner(true)
         const url = `https://openapi.programming-hero.com/api/news/category/${categorieID}`;
         const res = await fetch(url);
         const data = await res.json();
         displayPostSec(data.data)
-    }
-    catch(error){
+    } catch (error) {
         console.log(error);
     }
 }
@@ -29,12 +28,11 @@ const loadCusTypedata = async (categorieID) => {
 // Load News By News URL ID 
 
 const loadDataDetails = async (urlID) => {
-    try{
+    try {
         const url = `https://openapi.programming-hero.com/api/news/${urlID}`;
         const res = await fetch(url);
         const data = await res.json();
-    }
-    catch(error){
+    } catch (error) {
         console.log(error);
     }
 }
@@ -42,13 +40,11 @@ const loadDataDetails = async (urlID) => {
 // Load Post Author Name And Total View
 
 const loadPostAuthorData = async (urlID) => {
-    try{
+    try {
         const url = `https://openapi.programming-hero.com/api/news/${urlID}`;
         const res = await fetch(url);
         const data = await res.json();
-    }
-    catch(error){
+    } catch (error) {
         console.log(error);
     }
 }
-

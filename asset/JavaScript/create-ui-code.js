@@ -4,9 +4,25 @@
 function creCategsBtn (categName,categID)  {
     const creBtn = document.createElement('button');
     creBtn.classList.add('categories-button','text-start','my-1','my-lg-0');
-    creBtn.setAttribute('onclick',`loadCusTypedata('${categID}')`)
+    creBtn.setAttribute('onclick',`loadCusTypedata('${categID}');`)
+    // creBtn.setAttribute('onclick',`postCountSec('${categID}');`)
+    // creBtn.setAttribute('onclick',`postCountSec('${categName}');`)
     creBtn.innerText = categName;
     return creBtn
+}
+
+//  Create Post Count Section
+
+function postCountSec (getObjData) {
+    const selPostCountContainer = document.getElementById('categName');
+    selPostCountContainer.innerHTML = '';
+    const creDivtag = document.createElement('div');
+    creDivtag.classList.add('px-4')
+    creDivtag.innerHTML = `  
+    <p class="mb-0 fw-medium text-center text-sm-start"><span id="postCount">0</span> items found <span
+            class="d-none d-sm-inline-block">for category <span>${getObjData}</span></span></p>
+    `
+    return selPostCountContainer.appendChild(creDivtag)
 }
 
 // Create Post Section button
@@ -23,8 +39,8 @@ function crePostSec (postID,title,thumb,details,bigThum,name,img,date,views,rate
     <div class="col-md-8">
       <div class="card-body light-black-color">
         <h5 class="card-title text-black02">${title}</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text my-2">${details.substring(0,300)}</p>
+        <p class="card-text">${details.substring(300,600)}</p>
         <div class="row align-items-center text-center text-lg-start">
         <!-- Post Owner Details -->
           <div class="col-6 col-lg-3">
@@ -96,4 +112,16 @@ function crePostSec (postID,title,thumb,details,bigThum,name,img,date,views,rate
   </div>
     `
     return creDiv
+}
+
+// Loading Spinner
+
+const loadSpinner = (run) => {
+    const selLoadingElem = document.getElementById('loadingAnim');
+    if(run){
+        return selLoadingElem.classList.replace('d-none','d-block')
+    }
+    else{
+        return selLoadingElem.classList.add('d-none')
+    }
 }
