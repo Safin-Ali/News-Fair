@@ -117,7 +117,7 @@ function crePostSec (postID,title,thumb,details,bigThum,name,img,date,views,rate
 
 // Loading Spinner
 
-const loadSpinner = (run) => {
+function loadSpinner (run) {
     const selLoadingElem = document.getElementById('loadingAnim');
     if(run){
         return selLoadingElem.classList.replace('d-none','d-block')
@@ -125,4 +125,92 @@ const loadSpinner = (run) => {
     else{
         return selLoadingElem.classList.add('d-none')
     }
+}
+
+// Create Blog Page
+
+function createBlogPage () {
+    const selPostContainer = document.getElementById('postConatiner');
+    selPostContainer.innerHTML = ``;
+    const creDivTag = document.createElement('div');
+    creDivTag.classList.add('table-responsive')
+    creDivTag.innerHTML =`
+    <h1 class="text-center mb-5">JavaScript ES6 Core Concept Summary</h1>
+    <div class="my-3">
+        <h5 class="text-center">01) What are the difference between let const,var each other?<span
+                class="text-primary">var,</span><span class="text-warning">let,</span><span
+                class="text-danger">const</span></h5>
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Details</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Var :</th>
+                            <td>It creates a function scoped variable which can be
+                                reassigned or redeclared later on.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Let :</th>
+                            <td>It was introduced in ES6. It is the preferred way over using var. It creates a block-scoped variable,which can be reassigned but can't be redeclared.</td>
+                        </tr>
+                    </tbody>
+                  </table>
+    </div>
+    <div class="my-5">
+        <h5 class="text-center">02) What are the difference between Arrow Function And Regular Function</h5>
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Details</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Regular:</th>
+                            <td>Inside of a regular JavaScript function, this value (aka the execution context) is dynamic. The dynamic context means that the value of this depends on how the function is invoked. In JavaScript, there are 4 ways you can invoke a regular function.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Arrow :</th>
+                            <td>Arrow function — also called fat arrow function— is a new feature introduced in ES6 that is a more concise syntax for writing function expressions. While both regular JavaScript functions and arrow functions work in a similar manner, there are certain differences between them.</td>
+                        </tr>
+                    </tbody>
+                  </table>
+    </div>
+    <div class="my-5">
+        <h5 class="text-center">03) What are the difference between map,forEach,filter,find</h5>
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Details</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">forEach:</th>
+                            <td>Foreach takes a callback function and run that callback function on each element of array one by one.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Filter :</th>
+                            <td>The main difference between forEach and filter is that forEach just loop over the array and executes the callback but filter executes the callback and check its return value. If the value is true element remains in the resulting array but if the return value is false the element will be removed for the resulting array.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Map :</th>
+                            <td>Map like filter & foreach takes a callback and run it against every element on the array but whats makes it unique is it generate a new array based on your existing array.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Find :</th>
+                            <td>The find() method returns the value of the first element that passes a test. The find() method executes a function for each array element. The find() method returns undefined if no elements are found. The find() method does not execute the function for empty elements.</td>
+                        </tr>
+                    </tbody>
+                  </table>
+    </div>
+    `
+    selPostContainer.appendChild((creDivTag))
+    return creDivTag
 }

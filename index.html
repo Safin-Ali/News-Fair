@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="asset/CSS/spinner.css">
 </head>
 
-<body onload="loadAllTypeData();defaultLoadAPI()">
+<body onload="loadAllTypeData(); defaultLoadAPI()">
 
     <header class="my-3 container">
         <!-- Navbar Area -->
@@ -26,8 +26,7 @@
             <div class="d-flex flex-column flex-md-row align-items-center">
                 <div class="my-2 my-md-0">
                     <a class="navbar-button mx-1" href="#">News</a>
-                    <a class="navbar-button mx-1" href="#">Blog</a>
-                    <a class="navbar-button mx-1" href="#">About</a>
+                    <button class="navbar-button mx-1 border-0 bg-transparent" onclick="createBlogPage()">Blog</button>
                 </div>
                 <div class="mx-md-3">
                     <img class="d-block" src="asset/Images/user-avatar.png" alt="User Avatar">
@@ -67,6 +66,7 @@
     <main class="container my-3">
         <!-- Posts Section -->
         <section id="postConatiner">
+
         </section>
         <span class="loader mx-auto d-none dark-black" id="loadingAnim"></span>
     </main>
